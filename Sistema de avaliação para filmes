@@ -1,0 +1,16 @@
+movies = {
+    "FILME 1": "Detona Ralph",
+    "FILME 2": "Harry Potter e a Pedra Filosofal",
+    "FILME 3": "Percy Jackson e o Ladrão de Raios",
+    "FILME 4": "Jogos Vorazes",
+    "FILME 5": "Deadpool",
+}
+for movie in movies.items():
+     while True:
+      print(movie)
+      notas_filmes = int(input('Digite a nota do filme: '))
+      if notas_filmes <= 10 and notas_filmes >= 0:
+        print('Nota válida')
+        break
+      else:
+        print('Nota inválida. Digite uma nota entre 0 e 10.'),
