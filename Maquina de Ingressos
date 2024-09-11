@@ -1,0 +1,71 @@
+filmes = {
+    "Livre": {
+        "Detona Ralph": 10
+    },
+    "12 anos": {
+        "Harry Potter e a Pedra Filosofal": 13
+    },
+    "14 anos": {
+        "Percy Jackson e o Ladrão de Raios": 15
+    },
+    "16 anos": {
+        "Jogos Vorazes": 17
+    },
+    "18 anos": {
+        "Deadpool": 100
+    }
+}
+
+idade = int(input('Qual a sua idade? '))
+
+for faixa_etaria, filmes_faixa in filmes.items():
+  for filme, idade_maxima in filmes_faixa.items():
+    if idade <= idade_maxima:
+      print(f'Recomendado para você: "{filme}" ({faixa_etaria})')
+      break
+  if idade <= idade_maxima:
+    break
+# VERIFICAR DISPONIBILIDADE DE INGRESSOS
+
+while True:
+  quantos_ingressos = int(input('Quantos ingressos você deseja? '))
+  if quantos_ingressos <= 10:
+    print('Há ingressos disponíveis.')
+    break
+  else:
+    print('Não há ingressos disponíveis.')
+
+# VALOR PARA CADA INGRESSO
+
+print('Valor do ingresso: R$ 10,00')
+valor_total = quantos_ingressos * 10
+print(f'Valor total: R$ {valor_total}')
+
+# COMO O CLIENTE DESEJA PAGAR?
+
+print('Forma de pagamento: Cartão de crédito, débito, pix ou especie?')
+print('1 - Cartão de crédito')
+print('2 - Débito')
+print('3 - Pix')
+print('4 - Espécie')
+cartao_credito = 1
+debito = 2
+pix = 3
+especie = 4
+pagamento = int(input('Digite o número correspondente a forma de pagamento: '))
+if pagamento == cartao_credito:
+  print(f'Valor total: R$ {valor_total}')
+  print('Pode inserir ou aproximar')
+  print('Pagamento realizado com sucesso')
+if pagamento == debito:
+  print(f'Valor total: R$ {valor_total}')
+  print('Pode inserir ou aproximar')
+  print('Pagamento realizado com sucesso')
+if pagamento == pix:
+  print(f'Valor total: R$ {valor_total}')
+  print('Pode ler o QR Code')
+  print('Pagamento realizado com sucesso')
+if pagamento == especie:
+  print(f'Valor total: R$ {valor_total}')
+
+print('OBRIGADO VOLTE SEMPRE')
