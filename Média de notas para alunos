@@ -1,0 +1,18 @@
+notas = []
+for i in range(4):
+  while True:
+    nota = float(input(f'Digite a nota {i+1}: ').replace(',', '.'))
+    if nota <=10 and nota >= 0:
+      notas.append(nota)
+      print('Nota Válida')
+      break
+    else:
+      print('Nota inválida. Digite uma nota entre 0 e 10.')
+
+media = sum(notas) / len (notas)
+print('A média do aluno é: {}'.format(media))
+
+if media >= (7):
+  print('aprovado')
+else:
+  print('reprovado')
