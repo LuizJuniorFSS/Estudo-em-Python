@@ -1,0 +1,20 @@
+print("Seja bem vindo ao CINEPLUS")
+print('Abaixo, digite sua idade para te recomendarmos um filme.')
+
+idade = int(input('Qual a sua idade? '))
+
+if idade <=10:
+  print('O filme recomendado para sua faixa étaria é: "DETONA RALPH"')
+if idade >=11 and idade <18:
+  print('O filme recomendado para sua faixa étaria é: "HOMEM ARANHA: SEM VOLTA PARA CASA"')
+elif idade >=18 and idade <65:
+  print('O filme recomendado para sua faixa étaria é: "DEAD POOL & WOLVERINE"')
+
+# VERIFICAR DISPONIBILIDADE DE INGRESSOS
+
+quantos_ingressos = int(input('Quantos ingressos você deseja? '))
+ingressos = 6 - quantos_ingressos
+if ingressos > 0:
+  print('Há ingressos disponíveis.')
+else:
+  print('Não há ingressos disponíveis.')
